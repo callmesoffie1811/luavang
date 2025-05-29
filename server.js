@@ -330,6 +330,40 @@ app.use('/admin-*.css', (req, res, next) => {
   }
 });
 
+// 404 Error Handler - This should be after all other routes
+app.use((req, res, next) => {
+  // Check if the request accepts HTML
+  if (req.accepts('html')) {
+    res.status(404).sendFile(path.join(__dirname, '404.html'));
+  } 
+  // Check if the request accepts JSON
+  else if (req.accepts('json')) {
+    res.status(404).json({ error: 'Not found' });
+  } 
+  // Default to plain text
+  else {
+    res.status(404).type('txt').send('Not found');
+  }
+});
+
+// 500 Error Handler
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  
+  // Check if the request accepts HTML
+  if (req.accepts('html')) {
+    res.status(500).sendFile(path.join(__dirname, '500.html'));
+  } 
+  // Check if the request accepts JSON
+  else if (req.accepts('json')) {
+    res.status(500).json({ error: 'Server error occurred' });
+  } 
+  // Default to plain text
+  else {
+    res.status(500).type('txt').send('Server error');
+  }
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
