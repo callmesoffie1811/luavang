@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/Register - Lua Vang</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/logo.png" alt="Company Logo" style="max-height: 40px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Login/Register Header -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <h3 class="fw-bold mb-2">Account Access</h3>
+    <p class="mb-0">Login or register to access your account</p>
+  </div>
+</section>
+
+<main>
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" id="loginTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" 
+                    type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" 
+                    type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="loginTabContent">
+                <!-- Login Form -->
+                <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                  <form id="loginForm">
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Login</button>
+                  </form>
+                </div>
+
+                <!-- Register Form -->
+                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                  <form id="registerForm">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="password" required>
+                      <div class="form-text">Password must be at least 8 characters long with letters, numbers, and special characters.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirmPassword" class="form-label">Confirm Password</label>
+                      <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<footer class="py-5" style="background-color: #f8f9fa; color: #212529;">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex align-items-center mb-2">
+          <img src="images/logo.png" alt="Company Logo" style="max-height: 40px; margin-right: 10px;">
+          <h5 class="fw-bold mb-0">Lua Vang Company Ltd</h5>
+        </div>
+        <p><strong>Address:</strong> Tan Thoi, Tan Hoi Dong Ward, Chau Thanh, Tien Giang Province</p>
+        <p><strong>Phone:</strong> +84 98 6399 808</p>
+        <p><strong>Email:</strong> congtytnhhluavang@gmail.com</p>
+        <p class="mb-0">© 2024 Lua Vang Company Ltd</p>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">More Information</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+          <li><a href="about.html" class="text-decoration-none text-dark">About Us</a></li>
+          <li><a href="product.html" class="text-decoration-none text-dark">Products</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold">Connect With Us</h5>
+        <div class="d-flex align-items-center">
+          <a href="https://zalo.me/84986399808" target="_blank" class="me-3 text-dark">
+            <img src="images/zalo.png" alt="Zalo" style="width: 24px; height: 24px;">
+          </a>
+          <a href="mailto:congtytnhhluavang@gmail.com" class="me-3 text-dark">
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+          <a href="https://facebook.com/CongTyTNHHLuaVang" target="_blank" class="me-3 text-dark">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

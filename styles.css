@@ -1,0 +1,49 @@
+.floating-button i {
+    transition: transform 0.3s;
+  }
+
+  .chat-wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  .chat-toggle {
+    background-color: #6a5acd;
+    color: #fff;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .chat-options {
+    display: none;
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .chat-options a {
+    background-color: #007bff;
+    color: white;
+    font-size: 22px;
+    padding: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    .responsive-banner {
+      background-size: contain;  /* makes the image fit within container */
+      min-height: 40vh;          /* reduce height for mobile */
+      background-position: top center;
+    }
+  }
+
+

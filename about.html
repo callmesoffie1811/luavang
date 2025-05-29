@@ -1,149 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Lúa Vàng</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    body { font-family: Arial, sans-serif; }
-    .banner { background: #ccc; padding: 3rem 1rem; text-align: center; }
-    .section-title { margin-top: 3rem; margin-bottom: 1rem; text-align: center; }
-    .footer { background-color: #e9ecef; text-align: center; padding: 1rem; font-size: 14px; margin-top: 3rem; }
-    .values-icons img { width: 60px; }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us – Lua Vang Company Ltd</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="styles.css">
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="logo.png" alt="Company Logo" style="max-height: 40px;">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navBar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="product.html">Product</a></li>
-        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Banner -->
-<div class="banner">
-  <h2>Lúa Vàng Company Ltd</h2>
-  <p>Connecting with Vietnamese farming communities to bring fresh produce to your table</p>
-  <a href="product.html" class="btn btn-dark">Learn More</a>
-</div>
-
-<!-- Our Story -->
-<div class="container">
-  <h2 class="section-title">Our Story</h2>
-  <p class="text-center">Discover the journey and vision of Lúa Vàng</p>
-  <div class="row">
-    <div class="col-md-6">
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5>Roots in Agriculture</h5>
-          <p>Founded in 2005, Lúa Vàng Company Ltd started with a vision to support local farmers and deliver fresh, sustainable products. 🌾</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5>Community Connection</h5>
-          <p>We work closely with Vietnamese farming communities, ensuring fair trade and quality produce for our customers.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 text-center">
-      <img src="field2.jpg" alt="Our Story Image" class="img-fluid rounded shadow" style="max-height: 250px;">
-    </div>
-  </div>
-</div>
-
-<!-- Our Values -->
-<div class="container">
-  <h2 class="section-title">Our Values</h2>
-  <p class="text-center">Lúa Vàng · Golden Rice and Great Harvest</p>
-  <div class="row text-center values-icons">
-    <div class="col-md-4">
-      <img src="sustainability.png" alt="Sustainability" />
-      <h6>Sustainability</h6>
-      <p>Eco-friendly practices</p>
-    </div>
-    <div class="col-md-4">
-      <img src="farmer.png" alt="Community" />
-      <h6>Community</h6>
-      <p>Supporting local farmers</p>
-    </div>
-    <div class="col-md-4">
-      <img src="leaf.png" alt="Quality" />
-      <h6>Quality</h6>
-      <p>Fresh and premium produce</p>
-    </div>
-  </div>
-</div>
-
-<!-- Contact Form -->
-<div class="container mt-5">
-  <h2 class="section-title">Get in Touch</h2>
-  <p class="text-center">Have any questions or feedback? Reach out to us!</p>
-  <form id="contactForm" onsubmit="return validateForm()">
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <input type="text" id="name" class="form-control" placeholder="Name" required />
-      </div>
-      <div class="col-md-6 mb-3">
-        <input type="email" id="email" class="form-control" placeholder="Email" required />
-      </div>
-    </div>
-    <div class="mb-3">
-      <textarea id="message" class="form-control" placeholder="Message" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-dark">Submit</button>
-  </form>
-</div>
-
-<!-- Social Feed -->
-<div class="container mt-5">
-  <h2 class="section-title">Social Feed</h2>
-  <p class="text-center">Stay updated on our latest stories and community activities</p>
-  <div class="card mb-3">
-    <div class="card-body">📍 Farmers market event<br/>Join us at the local farmers market today! #SupportLocal</div>
-  </div>
-  <div class="card mb-3">
-    <div class="card-body">🌾 Harvest season<br/>Celebrating a successful harvest with our farming partners #Sustainability</div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="footer">
-  <p>© Lúa Vàng Company Ltd. All Rights Reserved.</p>
-  <p>Contact: congytnhhluavang@gmail.com | Phone: (+84) 98 6399 808</p>
-</div>
-
-<script>
-function validateForm() {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  if (!name || !email || !message) {
-    alert("Please fill in all fields.");
-    return false;
+    <script src="main.js" defer></script>
+    <style>
+    .hero-banner {
+    background-image: url('images/field.jpg'); 
+    background-size: cover;       /* Ensures the image fills the section */
+    background-position: center;  /* Keeps it centered */
+    background-repeat: no-repeat; 
+    height: 400px;                /* Adjust the height as needed */
   }
-  alert("Form submitted successfully!");
-  return true;
-}
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+  .highlight-dark {
+    background-color: #444;
+    color: #fff;
+    padding: 50px 20px;
+  }
+  .section-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  .btn-dark {
+    background-color: #000;
+    border: none;
+  }
+  .info-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+  .footer {
+    font-size: 14px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    margin-top: 60px;
+  }
+  .body { font-family: Arial, sans-serif; }
+      .banner { background: #d0e4ee; padding: 3rem 1rem; text-align: center; }
+      .section-title { margin-top: 3rem; margin-bottom: 1rem; text-align: center; }
+      .footer { background-color: #d0e4ee; text-align: center; padding: 1rem; font-size: 14px; margin-top: 3rem; }
+      .values-icons img { width: 60px; }
+  </style>
+
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" alt="Company Logo"
+            style="max-height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navBar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navBar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link"
+                href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active"
+                href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="product.html">Product</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Background Image Section -->
+    <section
+    class="responsive-banner text-white text-center d-flex align-items-center justify-content-center"
+    style="
+      background: url('images/banner.jpg') no-repeat center center;
+      background-size: cover;
+      min-height: 60vh;
+      padding: 4rem 1rem;">
+  </section>
+    <!-- Our Story -->
+    <div class="container my-5"
+      style="padding: 40px; border-radius: 10px;">
+      <div class="row align-items-center">
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2 class="section-title">Our Story</h2>
+          <p class="text-center">Discover the journey and vision of Lúa Vàng</p>
+          <p class="text-align">
+            Founded in 2015, realizing the increasing demand for quality rice
+            seeds among farmers, we decided to establish the Lua Vang
+            Agricultural Service Business Household, with a factory of about
+            1,100 m² (located in Tan Thoi Hamlet, Tan Hoi Dong Commune, Chau
+            Thanh Town, Tien Giang Province, Vietnam), specializing in providing
+            rice seeds. We expanded our market to distributors and farmers in
+            the Mekong Delta region, cooperating with the Tien Giang
+            Agricultural Extension and Service Center to inspect and certify the
+            quality of our rice seeds. 🌾
+          </p>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-md-6 text-center">
+          <img src="images/luavang.jpg" alt="Our Story Image"
+            class="img-fluid rounded shadow" style="max-height: 350px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Our Values -->
+    <div class="container my-5" style="padding: 40px; border-radius: 10px;">
+      <div class="row align-items-center">
+        
+        <!-- Image Column: now comes first -->
+        <div class="col-md-6 text-center">
+          <img src="images/field2.jpg" alt="Our Story Image"
+               class="img-fluid rounded shadow" style="max-height: 350px;">
+        </div>
+    
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2 class="section-title">Our Values </h2>
+          <p class="text-center">Discover the journey and vision of Lúa Vàng</p>
+          <p class="text-align">
+            Our factory is equipped with modern machinery and technology, ensuring
+            the production of high-quality rice seeds. We are committed to providing
+            the best products to our customers, with a focus on quality and sustainability.
+            We are proud to be a trusted partner for farmers in the Mekong Delta region,
+            helping them achieve better yields and improve their livelihoods. 🌱
+          </p>
+        </div>
+    
+      </div>
+    </div>
+
+        <!-- Contact Form -->
+    <div class="container mt-5">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="text-center">Have any questions or feedback? Reach out to us!</p>
+      <form id="contactForm" onsubmit="return validateForm()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <input type="text" id="name" class="form-control" placeholder="Name" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="email" id="email" class="form-control" placeholder="Email" required />
+          </div>
+        </div>
+        <div class="mb-3">
+          <textarea id="message" class="form-control" placeholder="Message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+
+    <!-- Social Feed -->
+    <div class="container mt-5">
+      <h2 class="section-title">Social Feed</h2>
+      <p class="text-center">Stay updated on our latest stories and community
+        activities</p>
+      <div class="card mb-3">
+        <div class="card-body">📍 Farmers market event<br />Join us at the local
+          farmers market today! #SupportLocal</div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">🌾 Harvest season<br />Celebrating a successful
+          harvest with our farming partners #Sustainability</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5" style="background-color: #f8f9fa; color: #212529;">
+      <div class="container">
+        <div class="row">
+
+          <!-- Company Info -->
+          <div class="col-md-4 mb-4">
+            <!-- Logo and Company Name in One Line -->
+            <div class="d-flex align-items-center mb-2">
+              <img src="images/logo.png" alt="Company Logo"
+                style="max-height: 40px; margin-right: 10px;">
+              <h5 class="fw-bold mb-0">Lua Vang Company Ltd</h5>
+            </div>
+
+            <!-- Company Details -->
+            <p><strong>Address:</strong> Tan Thoi, Tan Hoi Dong Ward, Chau
+              Thanh, Tien Giang Province</p>
+            <p><strong>Phone:</strong> +84 98 6399 808</p>
+            <p><strong>Email:</strong> congtytnhhluavang@gmail.com</p>
+            <p class="mb-0">© 2024 Lua Vang Company Ltd</p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">More Information</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html"
+                  class="text-decoration-none text-dark">Home</a></li>
+              <li><a href="about.html"
+                  class="text-decoration-none text-dark">About Us</a></li>
+              <li><a href="product.html"
+                  class="text-decoration-none text-dark">Products</a></li>
+              <li><a href="contact.html"
+                  class="text-decoration-none text-dark">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Connect With Us</h5>
+            <div class="d-flex align-items-center">
+              <a href="https://zalo.me/84986399808" target="_blank"
+                class="me-3 text-dark">
+                <img src="images/zalo.png" alt="Zalo"
+                  style="width: 24px; height: 24px;">
+              </a>
+              <a href="mailto:congtytnhhluavang@gmail.com"
+                class="me-3 text-dark">
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
+              <a href="https://facebook.com/CongTyTNHHLuaVang" target="_blank"
+                class="me-3 text-dark">
+                <i class="fab fa-facebook fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Chat Icon -->
+    <div class="chat-wrapper">
+      <div class="chat-toggle" onclick="toggleChatOptions()">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <div class="chat-options" id="chatOptions">
+        <a href="tel:0986399808"><i class="fas fa-phone"></i></a>
+        <a href="https://m.me/CongTyTNHHLuaVang"><i
+            class="fab fa-facebook-messenger"></i></a>
+        <a href="mailto:congtytnhhluavang@gmail.com"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </body>
 </html>

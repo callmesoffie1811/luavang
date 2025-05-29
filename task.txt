@@ -1,0 +1,80 @@
+10.3D: Website project (Part 3 of 3): Add
+Database Access to Your Website
+Tasks
+In the final part of your website project, you are asked to incorporate database access into
+your site.
+It is left open to you what form that database access will be but it must meet the key
+requirement that your database should involve more than one data table.
+Database Access Options
+Some possible options could include, but not limited to, combinations of the following items
+(or similar that relate to your website):
+User login
+Note: this can be a simplistic demonstration implementation and does not need to
+include full encryption/security
+Saving contents of a Feedback Form
+Processing contents of an Item/Product Search
+Product lists/tables created from stored item information
+What will you submit?
+You should submit:
+Combined source code of your website.
+Source code of the JavaScript file that initialises the database tables
+Source code of the JavaScript file that handles the requests/interactions with the database
+tables (i.e., the index.js or other file)
+Screenshot of the browser window showing the input of data.
+Screenshot of the browser window showing the result/output of database interaction.
+
+
+Use SQLite with Node.js Backend
+✅ Why SQLite is best for you:
+Your project is frontend-heavy (HTML/CSS/JavaScript).
+
+You've worked on local projects before.
+
+You want simple, file-based DB access that:
+
+Does not require MySQL server or Workbench setup.
+
+Can be easily included in your submission (.db file or init script).
+
+Meets the task's requirement of multi-table database access.
+
+It's easy to write screenshots of both the input (form) and output (product display or feedback results).
+
+You likely don’t need enterprise-level DB features for this assignment.
+
+🧠 How your solution could look
+🔸 Database Design Example (Jewelry Shop Website)
+Table 1: products
+
+id, name, price, category_id
+
+Table 2: categories
+
+id, name
+
+✅ This covers the "more than one table" requirement.
+
+🧰 Tools to Use
+Tool	Purpose	Why It Works Here
+SQLite	Local file-based DB	Simple, no setup, portable .db
+Node.js + Express	Server/backend	You’ve used it before, beginner-friendly
+sqlite3 npm package	Connect Node.js to SQLite	Lightweight and easy to use
+HTML + JS	Your existing frontend	Already in your luavang project
+
+🚀 Implementation Plan
+Step	What to Do
+1.	Extract luavang.rar and run your frontend locally
+2.	Add a Node.js backend (index.js) that connects to SQLite
+3.	Create init_db.js to create and populate tables
+4.	Add form to insert/view product data or feedback
+5.	Add AJAX call from frontend to backend (fetch('/products'))
+6.	Take screenshots of form submission and data display
+7.	Prepare code, .db or init script, and screenshots for submission
+
+📦 What to Submit (based on your brief)
+✅ Deliverable	How to Produce It
+Website source code	Include updated index.html, JS, CSS
+init_db.js (DB setup script)	Script to create/populate tables
+index.js (Express backend)	Handles fetch/post to SQLite
+Screenshots: data input/output	Form submission + DB results on browser
+

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Lua Vang Company Ltd</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Page -->
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="main.js" defer></script>
+    <style>
+      .hero-banner {
+      background-image: url('images/field.jpg'); 
+      background-size: cover;       /* Ensures the image fills the section */
+      background-position: center;  /* Keeps it centered */
+      background-repeat: no-repeat; 
+      height: 400px;                /* Adjust the height as needed */
+    }
+
+    .highlight-dark {
+      background-color: #444;
+      color: #fff;
+      padding: 50px 20px;
+    }
+    .section-title {
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .btn-dark {
+      background-color: #000;
+      border: none;
+    }
+    .info-card {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+    .footer {
+      font-size: 14px;
+      padding: 20px 0;
+      background-color: #f8f9fa;
+      margin-top: 60px;
+    }
+  </style>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" alt="Company Logo"
+            style="max-height: 40px;">
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active"
+                href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About
+                Us</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="product.html">Product</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="news.html">News</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section
+      class="hero-banner text-white d-flex align-items-center justify-content-center text-center">
+      <div class="container">
+        <h1 class="fw-bold">Professionally showcasing agricultural products –
+          rice and rice seeds</h1>
+      </div>
+    </section>
+
+    <!-- Highlight Section with Slogan and Bootstrap Styling -->
+    <div class="bg-success text-white text-center py-5">
+      <div class="container">
+        <h3 class="fw-bold">Lúa Vàng Company Ltd</h3>
+        <p class="lead">Bringing quality rice seeds and rice straight from
+          Vietnamese farms to your table</p>
+        <p class="fst-italic">Great Crop, Great Harvest</p>
+        <a href="about.html" class="btn btn-light mt-3">About Us</a>
+      </div>
+    </div>
+
+    <!-- Our Story -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+
+        <!-- Embedded Facebook Video -->
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FCongTyTNHHLuaVang%2Fvideos%2F634986247578525%2F&show_text=false&width=560&t=0"
+              style="border:none; overflow:hidden;"
+              scrolling="no" frameborder="0" allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Text Content: Vertically Centered -->
+        <div
+          class="col-lg-6 d-flex flex-column justify-content-center text-center">
+          <h2 class="fw-bold mb-3">Our Story</h2>
+          <p class="mb-3">Discover the roots, mission, and values of our
+            company</p>
+          <div class="text-center my-3">
+            <a href="about.html" class="btn btn-dark btn-sm d-inline-block px-4">Learn
+              More</a>
+          </div>
+          <!-- Info Boxes Row -->
+          <div class="row justify-content-center">
+            <div class="col-md-6 mb-3">
+              <div class="border rounded p-3 h-100">
+                <h5 class="fw-bold">Our Heritage</h5>
+                <p class="mb-0">Started in a small village, we have grown to
+                  support local farmers and promote sustainable agriculture.</p>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="border rounded p-3 h-100">
+                <h5 class="fw-bold">Community Connection</h5>
+                <p class="mb-0">We are deeply rooted in the Vietnamese farming
+                  communities, ensuring fair practices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-5" style="background-color: #0a3d2e; color: white;">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Left Column: Text Content -->
+          <div class="col-lg-6 mb-4">
+            <h2 class="text-warning fw-bold">
+              Partnering with over 100+ business partners and serving millions
+              of farmers
+            </h2>
+            <p>
+              We take pride in being one of the leading rice seed suppliers in
+              the Southern Region of Vietnam, aiming to provide quality rice
+              seeds for farmers.
+            </p>
+            <a href="gallery.html" class="btn btn-warning btn-lg mt-3 px-4">
+              Explore Our Gallery
+            </a>
+          </div>
+
+          <!-- Right Column: Map Image and Markers -->
+          <div class="col-lg-6 d-flex justify-content-center">
+            <div class="position-relative" style="max-width: 280px;">
+              <img src="images/vietnam-map.png" alt="Vietnam Map"
+                class="img-fluid rounded">
+
+              <!-- Custom Map Markers (absolute positioned) -->
+              <span class="position-absolute"
+                style="top: 78%; left: 52%; transform: translate(-50%, -50%);">
+                <i class="fas fa-map-marker-alt text-warning fa-lg"></i>
+              </span>
+              <span class="position-absolute"
+                style="top: 75%; left: 55%; transform: translate(-50%, -50%);">
+                <i class="fas fa-map-marker-alt text-warning fa-lg"></i>
+              </span>
+              <!--Done-->
+              <span class="position-absolute"
+                style="top: 50%; left: 55%; transform: translate(-50%, -50%);">
+                <i class="fas fa-map-marker-alt text-warning fa-lg"></i>
+              </span>
+              <span class="position-absolute"
+                style="top: 65%; left: 55%; transform: translate(-50%, -50%);">
+                <i class="fas fa-map-marker-alt text-warning fa-lg"></i>
+              </span>
+              <span class="position-absolute"
+                style="top: 85%; left: 35%; transform: translate(-50%, -50%);">
+                <i class="fas fa-map-marker-alt text-warning fa-lg"></i>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Offerings -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+
+        <!-- Left Image: Slightly wider -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="images/field2.jpg" alt="Rice Field"
+            class="img-fluid rounded shadow w-100"
+            style="max-height: 430px; object-fit: cover;">
+        </div>
+
+        <!-- Right Content: Centered content and buttons -->
+        <div class="col-md-6 d-flex flex-column align-items-center text-center">
+          <h2 class="fw-bold">Our Offerings</h2>
+          <p class="mb-3">Discover Lua Vang's Riceseeds and Quality Rice
+            Varieties</p>
+          <a href="#" class="btn btn-dark mb-4">View All Products</a>
+
+          <!-- Product Cards -->
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="border rounded p-3 text-center h-100">
+                <h6 class="fw-semibold mb-1">Golden Aroma</h6>
+                <strong class="text-dark">100% Pure Jasmine Rice</strong>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="border rounded p-3 text-center h-100">
+                <h6 class="fw-semibold mb-1">Organic Biodiverse</h6>
+                <strong class="text-dark">Certified Organic Seeds</strong>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="border rounded p-3 text-center h-100">
+                <h6 class="fw-semibold mb-1">Nutri-Rice</h6>
+                <strong class="text-dark">Rich in Nutrients</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements and Satisfaction Section -->
+    <section class="container my-5">
+      <div class="row align-items-center">
+
+        <!-- Customer Satisfaction Chart -->
+        <div class="col-md-6 mb-4">
+          <img src="images/chartbar1.png" alt="Customer Satisfaction Chart"
+            class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Key Achievements (Vertically Centered) -->
+        <div
+          class="col-md-6 mb-4 d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <h2 class="fw-bold">Key Achievements</h2>
+            <p class="mb-3">Our Milestones and Achievements</p>
+            <a href="news.html" class="btn btn-dark btn-sm mb-3">Our News</a>
+
+            <div class="row text-center">
+              <div class="col-md-4">
+                <h6 class="fw-bold">20+</h6>
+                <p class="text-muted mb-0">Years in Business</p>
+              </div>
+              <div class="col-md-4">
+                <h6 class="fw-bold">100K+</h6>
+                <p class="text-muted mb-0">Happy Customers</p>
+              </div>
+              <div class="col-md-4">
+                <h6 class="fw-bold">+100</h6>
+                <p class="text-muted mb-0">Supplier Business Network</p>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5" style="background-color: #f8f9fa; color: #212529;">
+      <div class="container">
+        <div class="row">
+
+          <!-- Company Info -->
+          <div class="col-md-4 mb-4">
+            <!-- Logo and Company Name in One Line -->
+            <div class="d-flex align-items-center mb-2">
+              <img src="images/logo.png" alt="Company Logo"
+                style="max-height: 40px; margin-right: 10px;">
+              <h5 class="fw-bold mb-0">Lua Vang Company Ltd</h5>
+            </div>
+
+            <!-- Company Details -->
+            <p><strong>Address:</strong> Tan Thoi, Tan Hoi Dong Ward, Chau
+              Thanh, Tien Giang Province</p>
+            <p><strong>Phone:</strong> +84 98 6399 808</p>
+            <p><strong>Email:</strong> congtytnhhluavang@gmail.com</p>
+            <p class="mb-0">© 2024 Lua Vang Company Ltd</p>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">More Information</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html"
+                  class="text-decoration-none text-dark">Home</a></li>
+              <li><a href="about.html"
+                  class="text-decoration-none text-dark">About Us</a></li>
+              <li><a href="product.html"
+                  class="text-decoration-none text-dark">Products</a></li>
+              <li><a href="contact.html"
+                  class="text-decoration-none text-dark">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-bold">Connect With Us</h5>
+            <div class="d-flex align-items-center">
+              <a href="https://zalo.me/84986399808" target="_blank"
+                class="me-3 text-dark">
+                <img src="images/zalo.png" alt="Zalo"
+                  style="width: 24px; height: 24px;">
+              </a>
+              <a href="mailto:congtytnhhluavang@gmail.com"
+                class="me-3 text-dark">
+                <i class="fas fa-envelope fa-lg"></i>
+              </a>
+              <a href="https://facebook.com/CongTyTNHHLuaVang" target="_blank"
+                class="me-3 text-dark">
+                <i class="fab fa-facebook fa-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Floating Chat Icon -->
+    <div class="chat-wrapper">
+      <div class="chat-toggle" onclick="toggleChatOptions()">
+        <i class="fas fa-comment-dots"></i>
+      </div>
+      <div class="chat-options" id="chatOptions">
+        <a href="tel:0986399808"><i class="fas fa-phone"></i></a>
+        <a href="https://m.me/CongTyTNHHLuaVang"><i
+            class="fab fa-facebook-messenger"></i></a>
+        <a href="mailto:congtytnhhluavang@gmail.com"><i
+            class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </body>
+</html>
