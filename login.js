@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Check if user is already logged in
+  checkLoginStatus();
+  
   // Handle login form submission
   const loginForm = document.getElementById('loginForm');
   if (loginForm) {
@@ -91,5 +94,33 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Registration failed. Please try again.');
       }
     });
+  }
+  
+  // Function to check if user is already logged in
+  async function checkLoginStatus() {
+    try {
+      const response = await fetch('/api/user', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      });
+      
+      if (response.ok) {
+        const userData = await response.json();
+        console.log('User is logged in:', userData);
+        
+        // Redirect based on user role if they're already on the login page
+        if (window.location.pathname.includes('login.html')) {
+          if (userData.is_admin === 1) {
+            window.location.href = 'admin.html';
+          } else {
+            window.location.href = 'index.html';
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Error checking login status:', error);
+    }
   }
 });

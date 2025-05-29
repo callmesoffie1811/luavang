@@ -4,20 +4,96 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+require('dotenv').config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.static(path.join(__dirname, '/')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({
-  secret: 'luavang-secret-key',
+  secret: process.env.SESSION_SECRET || 'luavang-secret-key',
   resave: true,
   saveUninitialized: true,
   cookie: { secure: false, maxAge: 3600000 } // 1 hour
 }));
+
+// Initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Passport serialization
+passport.serializeUser((user, done) => {
+  done(null, user.id);
+});
+
+passport.deserializeUser((id, done) => {
+  db.get('SELECT id, username, is_admin FROM users WHERE id = ?', [id], (err, user) => {
+    if (err) return done(err);
+    done(null, user);
+  });
+});
+
+// Setup Google Strategy
+passport.use(new GoogleStrategy({
+    clientID: process.env.GOOGLE_CLIENT_ID,
+    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+    callbackURL: "/auth/google/callback"
+  },
+  (accessToken, refreshToken, profile, done) => {
+    // Check if user exists in our database
+    db.get('SELECT * FROM users WHERE google_id = ?', [profile.id], (err, user) => {
+      if (err) return done(err);
+      
+      if (user) {
+        // User exists, log them in
+        return done(null, user);
+      } else {
+        // User doesn't exist, create a new user
+        const email = profile.emails && profile.emails[0] ? profile.emails[0].value : '';
+        const displayName = profile.displayName || email;
+        
+        // First check if the email is already registered
+        db.get('SELECT * FROM users WHERE username = ?', [email], (err, existingUser) => {
+          if (err) return done(err);
+          
+          if (existingUser) {
+            // Update existing user with Google ID
+            db.run('UPDATE users SET google_id = ? WHERE id = ?', 
+              [profile.id, existingUser.id], 
+              (err) => {
+                if (err) return done(err);
+                return done(null, existingUser);
+              }
+            );
+          } else {
+            // Create new user
+            db.run(
+              'INSERT INTO users (username, google_id, is_admin, created_at) VALUES (?, ?, 0, datetime("now"))',
+              [email, profile.id],
+              function(err) {
+                if (err) return done(err);
+                
+                const newUser = {
+                  id: this.lastID,
+                  username: email,
+                  is_admin: 0,
+                  google_id: profile.id
+                };
+                
+                return done(null, newUser);
+              }
+            );
+          }
+        });
+      }
+    });
+  }
+));
 
 // Database connection
 const db = new sqlite3.Database('./luavang.db', (err) => {
@@ -45,6 +121,30 @@ const isAdmin = (req, res, next) => {
     res.status(403).json({ error: 'Not authorized' });
   }
 };
+
+// Google OAuth routes
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] })
+);
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login.html' }),
+  (req, res) => {
+    // Successful authentication
+    req.session.user = {
+      id: req.user.id,
+      username: req.user.username,
+      is_admin: req.user.is_admin
+    };
+    
+    // Redirect based on user role
+    if (req.user.is_admin === 1) {
+      res.redirect('/admin.html');
+    } else {
+      res.redirect('/index.html');
+    }
+  }
+);
 
 // Auth routes
 app.post('/api/login', (req, res) => {

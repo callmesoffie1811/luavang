@@ -1,17 +1,23 @@
 {
-  "name": "luavang-website",
+  "name": "luavang",
   "version": "1.0.0",
-  "description": "Lua Vang Company Website with SQLite Database",
+  "description": "Lua Vang Company Website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "init-db": "node init_db.js"
+    "dev": "nodemon server.js"
   },
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
-    "express": "^4.21.2",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "sqlite3": "^5.1.7"
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
